@@ -1,9 +1,13 @@
 package io.github.edadma.emoji
 
 import io.github.edadma.cross_platform.readFile
+import io.github.edadma.json.JSONReader
 
 object Main extends App {
 
-  println(new String(Character.toChars(0x1f635)))
+  val json = readFile("test.json")
+
+  JSONReader
+  println(json)
 
 }
