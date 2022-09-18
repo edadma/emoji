@@ -3,7 +3,7 @@ package io.github.edadma.emoji
 import scala.util.matching.Regex
 
 object Emoji {
-  val emoji =
+  private def emoji1 =
     Map(
       "file_cabinet" -> 0x1f5c4,
       "brown_square" -> 0x1f7eb,
@@ -396,6 +396,10 @@ object Emoji {
       "clinking_glasses" -> 0x1f942,
       "ant" -> 0x1f41c,
       "woman_playing_water_polo" -> 0x1f93d,
+    )
+
+  lazy val emoji: Map[String, Int] =
+    emoji1 ++ Map(
       "u7981" -> 0x1f232,
       "malawi" -> 0x1f1f2,
       "goat" -> 0x1f410,
@@ -1859,7 +1863,7 @@ object Emoji {
       "petri_dish" -> 0x1f9eb,
       "mosque" -> 0x1f54c,
       "no_bell" -> 0x1f515,
-      "atm" -> 0x1f3e7
+      "atm" -> 0x1f3e7,
     )
 
   val emojiRegex: Regex = ":([a-z_]+):".r
